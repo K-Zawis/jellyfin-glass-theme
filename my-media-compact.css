@@ -2,6 +2,11 @@
    MY MEDIA COMPACT LAYOUT (v2)
    =============================== */
 
+/* Add top padding to the whole My Media section */
+.verticalSection.section0 {
+    padding-top: 1.5em !important;
+}
+
 /* Hide "My Media" title */
 .verticalSection.section0 .sectionTitle.sectionTitle-cards.padded-left,
 .verticalSection.section0 .sectionTitle.sectionTitle-cards.padded-left span {
