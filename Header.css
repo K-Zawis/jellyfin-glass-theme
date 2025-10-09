@@ -1,0 +1,117 @@
+/* ============================
+   HOME APP BAR - Transparent
+   ============================ */
+
+/* Main app bar container */
+.skinHeader {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    padding: 12px 16px !important;
+}
+
+/* Remove any background on the header wrapper */
+.skinHeader-withBackground {
+    background: transparent !important;
+}
+
+/* Prevent the header from hiding when scrolling */
+.skinHeader.headroom--unpinned {
+    transform: translateY(0) !important;
+}
+
+/* Add padding to content so it doesn't go under the fixed header */
+.mainAnimatedPages {
+    padding-top: 60px !important;
+}
+
+/* ============================
+   TOP ROW - Long Blurred Pill
+   ============================ */
+
+.skinHeader .flex.align-items-center.flex-grow.headerTop,
+.skinHeader > .flex.align-items-center:first-child {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-radius: 20px !important;
+    padding: 8px 16px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    margin-bottom: 0.8em; /* spacing to tabs row */
+}
+
+/* Font & icon sizing inside top row */
+.skinHeader .flex.align-items-center.flex-grow.headerTop * {
+    font-size: 1em !important;
+}
+
+.skinHeader .flex.align-items-center.flex-grow.headerTop i,
+.skinHeader .flex.align-items-center.flex-grow.headerTop svg {
+    width: 1em !important;
+    height: 1em !important;
+}
+
+/* ============================
+   LEFT & RIGHT SECTIONS
+   ============================ */
+
+.headerLeft,
+.headerRight {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0em !important;
+    width: auto !important;
+    flex-shrink: 1 !important;
+    max-width:50% !important;
+}
+
+/* ============================
+   TABS
+   ============================ */
+
+/* Smooth transition for tabs */
+.headerTabs {
+    transition: opacity 0.3s ease, transform 0.3s ease !important;
+}
+
+/* Fade tabs out when scrolling down */
+.skinHeader.headroom--unpinned .headerTabs {
+    opacity: 0 !important;
+    transform: translateY(-20px) !important;
+    pointer-events: none !important;
+}
+
+/* Individual tab pills */
+.emby-tab-button {
+    color: white !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-radius: 20px !important;
+    padding: 0.8em 1em;
+    margin: 0 0.5em 0 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5em !important;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+/* Selected tab: glassy white pill, text black */
+.emby-tab-button-active {
+    background: rgba(255, 255, 255, 0.85) !important;  /* mostly opaque white */
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    color: black !important;
+}
