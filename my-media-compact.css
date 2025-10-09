@@ -1,0 +1,74 @@
+/* ===============================
+   MY MEDIA COMPACT LAYOUT (v2)
+   =============================== */
+
+/* Hide "My Media" title */
+.verticalSection.section0 .sectionTitle.sectionTitle-cards.padded-left,
+.verticalSection.section0 .sectionTitle.sectionTitle-cards.padded-left span {
+    display: none !important;
+}
+
+/* Hide all text inside My Media cards */
+.verticalSection.section0 .cardText.cardTextCentered.cardText-first {
+    display: none !important;
+}
+
+/* Normal My Media cards — slightly taller */
+.verticalSection.section0 .card {
+    height: auto !important;
+    max-height: 8em !important;
+    margin-right: 0.5em !important;
+    margin-bottom: 1em !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+    border-radius: 16px !important;
+}
+
+/* Make the “overflowBackdropCard” type a bit smaller */
+.verticalSection.section0 .card.overflowBackdropCard.card-hoverable.card-withuserdata {
+    max-height: 8.5em !important;
+}
+
+/* Force child containers to match card size */
+.verticalSection.section0 .card .cardBox,
+.verticalSection.section0 .card .cardScalable,
+.verticalSection.section0 .card .cardPadder {
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: 100% !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: inherit !important;
+}
+
+/* Make background image fill and center */
+.verticalSection.section0 .card .cardImageContainer {
+    position: absolute !important;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100% !important;
+    height: 100% !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    border-radius: inherit !important;
+    clip-path: inset(0 round 16px) !important;
+    overflow: hidden !important;
+    object-fit: cover !important;
+}
+
+/* Ensure overlays and buttons respect radius */
+.verticalSection.section0 .card .cardOverlayContainer,
+.verticalSection.section0 .card .cardOverlayContainer > *,
+.verticalSection.section0 .card .cardIndicators {
+    border-radius: inherit !important;
+    clip-path: inset(0 round 16px) !important;
+    overflow: hidden !important;
+}
+
+/* Fully consistent border radius for all nested layers */
+.verticalSection.section0 .card,
+.verticalSection.section0 .card * {
+    border-radius: 16px !important;
+    overflow: hidden !important;
+}
