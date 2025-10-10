@@ -43,7 +43,7 @@
 
 /* --- Hover Effect (Optional) --- */
 .verticalSection.section0 .card:hover {
-    transform: scale(0.75);
+    transform: scale(0.7) translateY(-3px);
 }
 
 /* Slightly smaller overflowBackdropCard variant */
