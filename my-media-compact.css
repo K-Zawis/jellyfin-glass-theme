@@ -33,17 +33,17 @@
     overflow: hidden !important;
 
     /* Scaling */
-    transform: scale(0.85);
+    transform: scale(0.7);
     transform-origin: center center;
     transition: transform 0.2s ease;
 
     /* Adjust horizontal spacing after scaling */
-    margin: 0 -1.25em !important;
+    margin: 0 -3.25em !important;
 }
 
 /* --- Hover Effect (Optional) --- */
 .verticalSection.section0 .card:hover {
-    transform: scale(0.9);
+    transform: scale(0.75);
 }
 
 /* Slightly smaller overflowBackdropCard variant */
