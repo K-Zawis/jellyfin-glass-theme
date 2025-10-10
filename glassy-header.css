@@ -43,6 +43,7 @@
     display: flex !important;
     justify-content: space-between !important;
     margin-bottom: 1em; /* spacing to tabs row */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Font & icon sizing inside top row */
@@ -106,6 +107,7 @@
     gap: 0.5em !important;
     transition: background 0.3s ease, transform 0.2s ease;
     cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Selected tab: glassy white pill, text black */
@@ -114,4 +116,5 @@
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(20px) !important;
     color: black !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
