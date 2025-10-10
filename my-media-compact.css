@@ -1,54 +1,60 @@
 /* ===============================
-   MY MEDIA COMPACT LAYOUT (v2)
+   My Media Compact Layout v3
    =============================== */
 
-/* Add top padding to the whole My Media section */
+/* --- My Media Section Container --- */
 .verticalSection.section0 {
-    padding-top: 3em !important;
+    padding-top: 1.5em !important;   /* balanced space from header */
+    padding-bottom: 0 !important;
+    margin: 0 !important;
 }
 
-/* Hide "My Media" title */
+/* --- Hide Section Titles, Subtitles, and Unused Textareas --- */
 .verticalSection.section0 .sectionTitle.sectionTitle-cards.padded-left,
-.verticalSection.section0 .sectionTitle.sectionTitle-cards.padded-left span {
+.verticalSection.section0 .sectionTitle.sectionTitle-cards.padded-left span,
+.verticalSection.section0 .cardText.cardTextCentered.cardText-first,
+.verticalSection.section0 .emby-textarea {
     display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    line-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-/* Hide all text inside My Media cards */
-.verticalSection.section0 .cardText.cardTextCentered.cardText-first {
-    display: none !important;
-}
-
-/* Normal My Media cards — slightly taller */
+/* --- My Media Cards --- */
 .verticalSection.section0 .card {
-    height: auto !important;
+    height: 8em !important;
     max-height: 8em !important;
-    margin-right: 0.5em !important;
-    margin-bottom: 1em !important;
-    overflow: hidden !important;
+    margin: 0 0.5em 0.5em 0 !important; /* tighter spacing between cards */
     display: flex !important;
     flex-direction: column !important;
     position: relative !important;
     border-radius: 16px !important;
+    overflow: hidden !important;
 }
 
-/* Make the “overflowBackdropCard” type a bit smaller */
+/* Slightly smaller overflowBackdropCard variant */
 .verticalSection.section0 .card.overflowBackdropCard.card-hoverable.card-withuserdata {
-    max-height: 8.5em !important;
+    height: 7.5em !important;
+    max-height: 7.5em !important;
 }
 
-/* Force child containers to match card size */
+/* --- Internal Wrappers --- */
 .verticalSection.section0 .card .cardBox,
 .verticalSection.section0 .card .cardScalable,
 .verticalSection.section0 .card .cardPadder {
+    position: relative !important;
     height: 100% !important;
     min-height: 0 !important;
     max-height: 100% !important;
-    position: relative !important;
     overflow: hidden !important;
     border-radius: inherit !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-/* Make background image fill and center */
+/* --- Background Image --- */
 .verticalSection.section0 .card .cardImageContainer {
     position: absolute !important;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -56,13 +62,13 @@
     height: 100% !important;
     background-size: cover !important;
     background-position: center center !important;
+    object-fit: cover !important;
     border-radius: inherit !important;
     clip-path: inset(0 round 16px) !important;
     overflow: hidden !important;
-    object-fit: cover !important;
 }
 
-/* Ensure overlays and buttons respect radius */
+/* --- Overlays & Indicators --- */
 .verticalSection.section0 .card .cardOverlayContainer,
 .verticalSection.section0 .card .cardOverlayContainer > *,
 .verticalSection.section0 .card .cardIndicators {
@@ -71,9 +77,15 @@
     overflow: hidden !important;
 }
 
-/* Fully consistent border radius for all nested layers */
-.verticalSection.section0 .card,
-.verticalSection.section0 .card * {
-    border-radius: 16px !important;
-    overflow: hidden !important;
+/* --- Section Item Container (Remove Padding/Gaps) --- */
+.verticalSection.section0 .itemsContainer {
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0.4em !important; /* smaller gaps without breaking scroll */
+}
+
+/* --- Optional Global Section Spacing --- */
+.verticalSection {
+    margin-bottom: 0.5em !important;
+    padding-bottom: 0.5em !important;
 }
