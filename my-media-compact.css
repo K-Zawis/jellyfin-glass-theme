@@ -1,10 +1,10 @@
 /* ===============================
-   My Media Compact Layout v3
+   My Media Compact Layout v4
    =============================== */
 
 /* --- My Media Section Container --- */
 .verticalSection.section0 {
-    padding-top: 1.5em !important;   /* balanced space from header */
+    padding-top: 3em !important;   /* balanced space from header */
     padding-bottom: 0 !important;
     margin: 0 !important;
 }
@@ -22,16 +22,28 @@
     padding: 0 !important;
 }
 
-/* --- My Media Cards --- */
+/* --- My Media Cards (Compact + Scaled) --- */
 .verticalSection.section0 .card {
     height: 8em !important;
     max-height: 8em !important;
-    margin: 0 0.5em 0.5em 0 !important; /* tighter spacing between cards */
     display: flex !important;
     flex-direction: column !important;
     position: relative !important;
     border-radius: 16px !important;
     overflow: hidden !important;
+
+    /* Scaling */
+    transform: scale(0.85);
+    transform-origin: center center;
+    transition: transform 0.2s ease;
+
+    /* Adjust horizontal spacing after scaling */
+    margin: 0 -1.25em !important;
+}
+
+/* --- Hover Effect (Optional) --- */
+.verticalSection.section0 .card:hover {
+    transform: scale(0.9);
 }
 
 /* Slightly smaller overflowBackdropCard variant */
@@ -81,7 +93,7 @@
 .verticalSection.section0 .itemsContainer {
     padding: 0 !important;
     margin: 0 !important;
-    gap: 0.4em !important; /* smaller gaps without breaking scroll */
+    gap: 0.4em !important; /* smaller gaps between cards */
 }
 
 /* --- Optional Global Section Spacing --- */
