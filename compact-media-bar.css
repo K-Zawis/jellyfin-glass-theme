@@ -144,3 +144,144 @@
     top: 320px !important;
     left: 40px !important;
 }
+
+/* Mobile portrait (up to 767px wide, portrait orientation) */
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* Adjust container height and spacing */
+    #homeTab .homeSectionsContainer {
+        margin-top: calc(320px + 1em) !important;
+    }
+    
+    #slides-container,
+    #homeTab #slides-container {
+        height: 320px !important;
+        max-height: 320px !important;
+        margin: 4.5em max(env(safe-area-inset-left), 3.3%) !important;
+        border-radius: 12px !important;
+    }
+    
+    #slides-container .slide,
+    #slides-container .backdrop-container,
+    #slides-container .backdrop {
+        height: 320px !important;
+        border-radius: 10px !important;
+    }
+    
+    .backdrop-overlay {
+        background-color: rgba(0, 0, 0, 0.6) !important;
+    }
+    
+    /* Keep backdrop masks removed */
+    #slides-container .backdrop {
+        mask-image: none !important;
+        -webkit-mask-image: none !important;
+    }
+    
+    /* Keep gradient hidden */
+    #slides-container .gradient-overlay {
+        display: none !important;
+    }
+    
+    /* Center and position logo at top */
+    #slides-container .logo-container {
+        top: 40px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        height: 70px !important;
+        width: 70% !important;
+        justify-content: center !important;
+    }
+    
+    #slides-container .logo {
+        max-height: 70px !important;
+        filter: brightness(1.5) !important;
+    }
+    
+    /* Center info container */
+    #slides-container .info-container {
+        top: 130px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 90% !important;
+        justify-content: center !important;
+        font-size: 0.85em !important;
+    }
+    
+    /* Center genre */
+    #slides-container .genre {
+        top: 165px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 90% !important;
+        font-size: 0.85em !important;
+        justify-content: center !important;
+    }
+    
+    /* Show and position plot between genre and buttons */
+    #slides-container .plot-container {
+        display: block !important;
+        top: 190px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 85% !important;
+        text-align: center !important;
+        height: auto !important;
+    }
+    
+    #slides-container .plot {
+        -webkit-line-clamp: 2 !important;
+        line-clamp: 2 !important;
+        max-height: 2.8em !important;
+        font-size: 0.75em !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* Center buttons - moved down to accommodate plot */
+    #slides-container .button-container {
+        top: 230px !important;
+        left: 50% !important;
+        transform: translateX(-50%) scale(0.75) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* Adjust dots position */
+    #slides-container .dots-container {
+        bottom: 10px !important;
+        left: 50% !important;
+        transform: translateX(-50%) scale(0.85) !important;
+    }
+    
+    /* Smaller arrows on mobile */
+    #slides-container .arrow.left-arrow {
+        left: 10px !important;
+        font-size: 10px !important;
+    }
+    
+    #slides-container .arrow.right-arrow {
+        right: 10px !important;
+        font-size: 10px !important;
+    }
+    
+    /* Adjust pause button */
+    #slides-container .pause-button {
+        top: 15px !important;
+        right: 15px !important;
+        transform: scale(0.8) !important;
+    }
+    
+    /* Hide "Play" text, show only icon */
+    #slides-container .play-button .play-text {
+        display: none !important;
+    }
+    
+    /* Adjust button to be circular like the other buttons */
+    #slides-container .play-button {
+        width: 60px !important;
+        height: 60px !important;
+        padding: 0 !important;
+        border-radius: 50% !important;
+        justify-content: center !important;
+    }
+}
