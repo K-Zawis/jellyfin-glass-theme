@@ -145,14 +145,22 @@
     left: 40px !important;
 }
 
-/* Mobile portrait (up to 767px wide, portrait orientation) */
+/* ============================================
+   MOBILE PORTRAIT
+   ============================================ */
 @media only screen and (max-width: 767px) and (orientation: portrait) {
     /* Adjust container height and spacing */
     #homeTab .homeSectionsContainer {
         margin-top: calc(320px + 1em) !important;
     }
     
-    #slides-container,
+    #slides-container {
+        height: 320px !important;
+        max-height: 320px !important;
+        margin: 4.5em max(env(safe-area-inset-left), 3.3%) !important;
+        border-radius: 12px !important;
+    }
+    
     #homeTab #slides-container {
         height: 320px !important;
         max-height: 320px !important;
@@ -160,21 +168,25 @@
         border-radius: 12px !important;
     }
     
-    #slides-container .slide,
-    #slides-container .backdrop-container,
-    #slides-container .backdrop {
+    #slides-container .slide {
         height: 320px !important;
         border-radius: 10px !important;
     }
     
-    .backdrop-overlay {
-        background-color: rgba(0, 0, 0, 0.6) !important;
+    #slides-container .backdrop-container {
+        height: 320px !important;
+        border-radius: 10px !important;
     }
     
-    /* Keep backdrop masks removed */
     #slides-container .backdrop {
+        height: 320px !important;
+        border-radius: 10px !important;
         mask-image: none !important;
         -webkit-mask-image: none !important;
+    }
+    
+    #slides-container .backdrop-overlay {
+        background-color: rgba(0, 0, 0, 0.6) !important;
     }
     
     /* Keep gradient hidden */
@@ -238,12 +250,13 @@
     
     /* Center buttons - moved down to accommodate plot */
     #slides-container .button-container {
-        top: 230px !important;
+        top: 245px !important;
         left: 50% !important;
         transform: translateX(-50%) scale(0.75) !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        gap: 10px !important;
     }
     
     /* Adjust dots position */
@@ -283,5 +296,11 @@
         padding: 0 !important;
         border-radius: 50% !important;
         justify-content: center !important;
+    }
+    
+    #slides-container .detail-button,
+    #slides-container .favorite-button {
+        width: 60px !important;
+        height: 60px !important;
     }
 }
