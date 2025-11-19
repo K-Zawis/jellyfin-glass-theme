@@ -1,0 +1,84 @@
+/* ============================================
+   GLOBAL CARD IMAGE STYLING
+   ============================================ */
+
+/* Apply border radius and border to card images only */
+.cardImageContainer,
+.cardContent:not(.defaultCardBackground),
+.cardImage,
+.blurhash-canvas {
+    border-radius: 12px !important;
+    border: 1px solid #3c3c40 !important;
+}
+
+/* For cards with default backgrounds */
+.defaultCardBackground {
+    border-radius: 12px !important;
+    border: 1px solid #3c3c40 !important;
+}
+
+/* Card scalable container */
+.cardScalable .cardImageContainer {
+    border-radius: 12px !important;
+}
+
+/* List item images */
+.listItemImage {
+    border-radius: 12px !important;
+    border: 1px solid #3c3c40 !important;
+}
+
+/* Card overlays - rounded but NO border */
+.cardOverlayContainer {
+    border-radius: 12px !important;
+    border: none !important;
+}
+
+/* Fix for visualCardBox - only round the image, not footer */
+.visualCardBox .cardContent,
+.visualCardBox .cardImageContainer,
+.visualCardBox .blurhash-canvas,
+.visualCardBox .cardImage {
+    border-radius: 12px !important;
+    border: 1px solid #3c3c40 !important;
+}
+
+/* Remove border from card boxes themselves */
+.cardBox {
+    border: none !important;
+}
+
+/* Card padder background */
+.cardBox:not(.visualCardBox) .cardPadder {
+    border-radius: 12px !important;
+    border: 1px solid #3c3c40 !important;
+}
+
+/* Remove border from overlay container's card image */
+.cardOverlayContainer .cardImageContainer {
+    border: none !important;
+}
+
+/* ============================================
+   ROUNDED PROGRESS BAR WITH PADDING
+   ============================================ */
+
+/* Add padding to the footer container */
+.innerCardFooter.fullInnerCardFooter {
+    padding: 0 16px 8px 16px !important;
+    box-sizing: border-box !important;
+}
+
+/* Round the progress bar */
+.innerCardFooter .itemProgressBar {
+    border-radius: 100em !important;
+    overflow: hidden !important;
+    height: 6px !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Round the progress bar fill */
+.innerCardFooter .itemProgressBarForeground {
+    border-radius: 100em !important;
+    height: 6px !important;
+}
