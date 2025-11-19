@@ -1,0 +1,146 @@
+/* ============================================
+   COMPACT MEDIA BAR
+   ============================================ */
+
+/* Push content below slideshow */
+#homeTab .homeSectionsContainer {
+    position: relative !important;
+    margin-top: calc(400px + 0.5em) !important; 
+    top: auto !important;
+    padding-top: 0 !important;
+}
+
+/* Clean up vertical sections */
+.verticalSection.section0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin: 0 !important;
+}
+
+/* Override plugin's default styles */
+#slides-container {
+    width: auto !important;
+    height: 400px !important;
+    margin: 4.5em max(env(safe-area-inset-left),3.3%) !important;
+    overflow: hidden !important;
+    position: relative !important;
+    border-radius: 12px !important;
+    border: 1px solid #3c3c40 !important;
+}
+
+/* Slideshow container - compact card style */
+#homeTab #slides-container {
+    width: auto !important;
+    height: 400px !important;
+    max-height: 400px !important;
+    margin: 4.5em max(env(safe-area-inset-left),3.3%) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+}
+
+/* Fix all slides to container height + rounded corners */
+#slides-container .slide {
+    height: 400px !important;
+    width: 100% !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+/* Remove mask gradients and apply rounded corners to backdrop layers */
+#slides-container .backdrop-container {
+    height: 400px !important;
+    width: 100% !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+#slides-container .backdrop {
+    height: 400px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+    border-radius: 12px !important;
+}
+
+#slides-container .backdrop-overlay {
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+    border-radius: 12px !important;
+}
+
+/* Hide gradient overlay */
+#slides-container .gradient-overlay {
+    display: none !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+}
+
+/* Reposition controls for compact view */
+#slides-container .dots-container {
+    top: auto !important;
+    bottom: 20px !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+}
+
+#slides-container .arrow.left-arrow {
+    top: 50% !important;
+    left: 20px !important;
+    transform: translateY(-50%) !important;
+}
+
+#slides-container .arrow.right-arrow {
+    top: 50% !important;
+    right: 20px !important;
+    transform: translateY(-50%) !important;
+}
+
+#slides-container .pause-button {
+    top: 20px !important;
+    right: 20px !important;
+}
+
+/* Adjust content positioning for 400px height */
+#slides-container .logo-container {
+    top: 60px !important;
+    left: 40px !important;
+    height: 80px !important;
+    width: 40% !important;
+}
+
+#slides-container .logo {
+    max-height: 80px !important;
+}
+
+#slides-container .info-container {
+    top: 160px !important;
+    left: 40px !important;
+}
+
+#slides-container .genre {
+    top: 200px !important;
+    left: 40px !important;
+}
+
+#slides-container .plot-container {
+    top: 240px !important;
+    left: 40px !important;
+    width: 50% !important;
+}
+
+#slides-container .plot {
+    -webkit-line-clamp: 2 !important;
+    max-height: 3em !important;
+}
+
+#slides-container .button-container {
+    top: 320px !important;
+    left: 40px !important;
+}
